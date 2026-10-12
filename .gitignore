@@ -1,3 +1,20 @@
+# C build artifacts
 /concurrent_server
 *.o
 /EINTR
+
+# Rust build artifacts (keep Cargo.lock for application reproducibility)
+target/
+
+# Local IDE settings
+/.vscode/
+/.idea/
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
