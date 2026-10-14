@@ -17,3 +17,8 @@ cc -std=c11 -Wall -Wextra -Wpedantic -I. \
 ### PHASE 3 
 -----
 1. Add the `sigaction` 
+
+
+### PHASE 4
+
+1. create the client 
