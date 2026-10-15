@@ -73,10 +73,10 @@ fn handle_connection(connid : OwnedFd){
                 unistd::close(connid).expect("failed to close conn");
                 return;
             }
-            Ok(_n) => {
+            Ok(n) => {
                 // while written < n {
 
-                match make_write(&connid, &buffer){
+                match make_write(&connid, &buffer[..n]){
                         Ok(n) => {
                             println!("wrote {} bytes", n); 
                         },
