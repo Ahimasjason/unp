@@ -3,7 +3,7 @@ use std::{
     println,
 };
 
-use concurrent_server::io_multiplexing::multi_server;
+use concurrent_server::{conn_per_process::conn_per_process};
 use nix::{
     errno::Errno::{self, EINTR},
     libc::{EXIT_FAILURE, STDOUT_FILENO, exit, fprintf},
@@ -14,7 +14,7 @@ use nix::{
 const PORT: u16 = 8080;
 
 fn main() {
-    multi_server();
+    conn_per_process();
 
     // let address = SockaddrIn::new(0,0,0,0, PORT);
     // let socket_fd = create_socket();
