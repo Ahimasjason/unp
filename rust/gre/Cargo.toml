@@ -1,0 +1,9 @@
+[package]
+name = "gre"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+nix = { version = "0.32.0", features = ["ioctl", "socket", "net", "poll"] }
+pnet = "0.35.0"
+socket2 = { version = "0.6.5", features = ["all"] }
